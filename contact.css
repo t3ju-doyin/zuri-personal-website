@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+main p {
+  width: 50%;
+  margin: 0 auto;
+  color: #02457a;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+main .message textarea {
+  border: none;
+  min-height: 1.7rem;
+  border: 2px solid #d6ebee;
+  border-radius: 5px;
+  outline: none;
+  color: #001b4b;
+  font-family: "Poppins", san-serif;
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
+main .message label {
+  color: #018abe !important;
+}
+main .message textarea:focus {
+  border: 2px solid #018abe;
+}
+main .message textarea:focus + label {
+  color: #001b4b;
+  transition: 0.4s;
+}
+main .message ::-moz-placeholder {
+  color: #02457a;
+  font-family: "Poppins", san-serif;
+  font-weight: light;
+  font-size: 0.7rem;
+  padding: 0.3rem 0 0 0.3rem;
+}
+main .message :-ms-input-placeholder {
+  color: #02457a;
+  font-family: "Poppins", san-serif;
+  font-weight: light;
+  font-size: 0.7rem;
+  padding: 0.3rem 0 0 0.3rem;
+}
+main .message ::placeholder {
+  color: #02457a;
+  font-family: "Poppins", san-serif;
+  font-weight: light;
+  font-size: 0.7rem;
+  padding: 0.3rem 0 0 0.3rem;
+}/*# sourceMappingURL=contact.css.map */

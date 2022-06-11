@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+$font: 'Poppins',san-serif;
+$fancy-font: 'Raleway', sans-serif;
+$regular-font: 'Ubuntu', sans-serif;
+// $very-light-purple:hsl(300, 49%, 82%);
+// $light-purple:hsl(300, 76%, 72%);
+// $regular-purple:hsl(274, 53%, 37%);
+// $dark-purple:hsl(267, 38%, 28%);
+// $very-dark-purple:hsl(287, 41%, 19%);
+// $whitish:hsl(0, 0%, 96%);
+$very-light-blue:#d6ebee;
+$light-blue:#97cadb;
+$regular-blue:#018abe;
+$dark-blue:#02457a;
+$very-dark-blue:#001b4b;
+$light-gradient:linear-gradient(173deg, rgba(214,235,238,1) 26%, rgba(1,138,190,1) 91%);
+$dark-gradient:linear-gradient(147deg, rgba(2,69,122,1) 20%, rgba(214,235,238,1) 75%);
+$whitish:hsl(0, 0%, 100%);
+$shadow:rgb(123, 155, 198);
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background: $light-blue;
+    font-family: $font;
+    height: 100vh;
+    position: relative;
+
+    header{
+        a{
+            text-decoration: none;
+        }
+        background-color: $very-light-blue;
+        border-bottom-right-radius:10px ;
+        border-bottom-left-radius:10px ;
+        border-bottom: 1px solid $very-dark-blue;
+        margin-bottom: 2rem;
+        position: sticky;
+        div.header-container{
+            width: 90%;
+            margin: 0  auto;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li + li, a+ a{
+                margin-left: 1rem;
+            }
+            ul{
+                display: flex;
+                justify-content: space-between;
+                li{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                li, li a{
+                    color:$very-dark-blue;
+                    font-weight: bold;
+                }
+                li a {
+                    position: relative;
+                }
+                  
+                li a::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 4px;
+                    background-color: $light-blue;
+                    top: 20px;
+                    left: 0;
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    transition: transform .3s ease-in-out;
+                }
+                  
+                li a:hover::before {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+            }
+            img{
+                width: 20%;
+                border-radius: 55%;
+            }
+            div.logo{
+                font-style: italic;
+                color: $regular-blue;
+                span{
+                    color: $very-dark-blue;
+                    font-weight: bold;
+                }
+                
+            }
+            
+        }
+    }
+}
+div.container {
+        // 
+        margin: 0 auto 2rem auto;
+        width: 35% ;
+    .header{
+        margin-bottom: 1rem;
+    }
+    main {
+        background-color: $whitish;
+        box-shadow: -7px 10px 5px 0px $shadow;
+        padding: 2.5rem 2rem;
+        border-radius: 9px;
+        p{
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            color: $dark-blue;
+            font-weight: bold;
+        }
+        form{
+
+            div.user-input{
+                display: flex;
+                flex-direction: column-reverse;
+                margin-bottom: 1em;
+
+                label{
+                    font-size: .9rem;
+                    font-weight: bold;
+                    margin-bottom: .3rem;
+                    color: $light-blue;
+                }
+                @mixin user-input {
+                    border: none;
+                    min-height: 1.7rem;
+                    border: 1.5px solid $very-light-blue;
+                    border-radius: 5px;
+                    outline: none;
+                    color: $very-dark-blue;
+                    font-family: $font;
+                    padding-left: .5rem;
+                    font-weight: bold
+
+                }
+                input{
+                   @include user-input();
+                }
+                input:focus{
+                    border: 2px solid $regular-blue;
+                   
+                }
+                input:focus + label{
+                    color: $very-dark-blue;
+                    transition: .4s;
+                }
+
+                
+            }
+            
+            button{
+                font-family: $font;
+                display: block;
+                cursor: pointer;
+                margin-left: auto;
+                padding: .5rem 1.7rem;
+                border-radius: 20px;
+                border: none;
+                background: $very-dark-blue;
+                color: $whitish;
+            }
+            button:hover{
+                border:1px solid $regular-blue;
+                background-color: $whitish;
+                color: $very-dark-blue;
+                transform: translate(2%,2%);
+                transition: .3s;
+            }
+        }
+
+    }
+}
+  
+
